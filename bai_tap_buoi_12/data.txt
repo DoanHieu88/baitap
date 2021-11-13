@@ -1,1 +1,14 @@
-[]
+[
+    {
+        name : "Nguyen Doan Hieu",
+        age : 10
+    },
+    {
+        name : "Nguyen Doan Thang",
+        age : 24
+    },
+    {
+        name : "Dao Quynh Giang",
+        age : 30
+    }
+]

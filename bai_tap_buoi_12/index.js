@@ -1,18 +1,17 @@
 var readlineSync = require('readline-sync');
 var fs = require('fs');
-let userChoose = readlineSync.question("Your choose: ");
+// let userChoose = readlineSync.question("Your choose: ");
+
 // đọc dữ liệu từ file data
-let readData = fs.readFileSync("./data.txt","utf-8");
+let studentJs = fs.readFileSync("./data.txt","utf-8");
 
-//convert dữ liệu từ file data sang string
-let convertData = JSON.stringify(readData);
+let studentStr = "";
 
-//convert file data sang kiểu js
-console.log(JSON.parse(convertData));
-
+let students = JSON.parse(studentJs);
+console.log(students)
 //hàm lưu file 
 function saveFile(){
-    
+    fs.writeFileSync("./data.txt",studentStr,"utf-8")
 }
 
 // hàm hiện thị lựa chọn
@@ -27,13 +26,12 @@ function showMenu(){
     console.log("       8.Exit");
     userChoose = readlineSync.question('ENTER YOUR CHOOSE: ');
 }
-showMenu();
+// showMenu();
 
 
 while(userChoose < 8){
     switch (userChoose) {
         case "1":
-            console.log(convertData);
             console.log("\n");
             showMenu();
             break;
@@ -85,7 +83,7 @@ function creatStudent(){
             case "2" : creat.gender = "female";
                 break;
         }
-    .push(creat);
+    students.push(creat);
 
     console.log(students);
     console.log("\n");
