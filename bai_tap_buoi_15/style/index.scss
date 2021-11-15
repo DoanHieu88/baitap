@@ -1,0 +1,107 @@
+
+body{
+    background-color: #4582df;
+}
+
+.container{
+    width: 350px;
+    height: 330px; 
+    margin: 200px auto;
+    background-color: #fff;
+    border-radius: 10px;
+
+    .h2{
+        font-weight: 800;
+        padding: 20px 0 15px 5px;
+    }
+    
+    .add-tasks{
+        display:flex;
+        height: 45px;
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+
+        .form-control{
+            width: 85%;
+        }
+        .btn1{
+            padding: 0;
+            border: none;
+            margin-left: 5px;
+            height: 45px;
+
+            svg{
+                color: #b487f0;
+                background-color: #fff;
+                font-size: 40px;
+                border-radius: 10px;
+
+                &:hover{
+                    background-color: #a15ffa;
+                }
+            }
+        }
+    }
+
+    .tasks{
+        width: 95%;
+        margin-left: 10px;
+
+        .task{
+            background-color: #d0d3d6;
+            padding-left: 12px;
+            height: 43px;
+            margin-bottom: 8px;
+            display: flex;
+
+            &:hover{
+                .btn-danger{
+                    display: block;
+                    animation-name: appear;
+                    animation-duration: 4s
+                }
+
+                @keyframes appear {
+                    0% {right: 0;}
+                    25% {right: 20px;}
+                }
+            }
+
+            .h6{
+                height: 43px;
+                line-height: 43px;
+                width: 90%;
+            }
+
+            .btn-danger{
+                display: none;
+            }
+        }
+    }
+    
+    .show-all-tasks{
+        margin: 30px 0 0 10px;
+        width: 95%;
+        display: flex;
+        height: 45px;
+
+        .h5{
+            font-size: 14px;
+            font-weight: 900;
+            flex: 2;
+            line-height: 45px;
+        }
+        .btn-warning{
+            height: 40px;
+            color: red;
+            font-weight: 500;
+
+            &:hover{
+                background-color: red;
+                color: #fff;
+            }
+        }
+    }
+    
+}
